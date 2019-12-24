@@ -307,7 +307,9 @@ public class PDFDomTree extends PDFBoxTree
         el.setAttribute("id", "p" + (textcnt++));
         el.setAttribute("class", "p");
         String style = curstyle.toString();
-        style += "width:" + width + UNIT + ";";
+        //modify by cxlh:里面的文字无需指定宽度，适应外围宽度即可
+        //style += "width:" + width + UNIT;
+        style += ";";
         el.setAttribute("style", style);
         return el;
     }
